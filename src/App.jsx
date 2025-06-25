@@ -9,7 +9,7 @@ function App() {
     const fetchFromBackend = async () => {
       try {
         setStatus("Calling backend...");
-        const res = await axios.post('http://localhost:5000/get-data');
+        const res = await axios.post('https://trackerbackend-4.onrender.com/get-data');
         setData(res.data.data); 
         setStatus("Data loaded");
         console.log("API Data:", res.data.data);
